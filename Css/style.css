@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    /* Colors */
+    --color01: #fff;
+    --color02: #bcbcbc;
+    --color03: #8d8d8d;
+    --color04: #86bfd3;
+    --color05: #013243;
+    --color06: #000;
+
+    /* Fonts */
+    --font01:"Robot",sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../image/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+    position: relative;
+    font-family: var(--font01);
+}
+
+.wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    min-width: 400px;
+}
+
+.conteudo-image{
+    background-color: var(--color05);
+    border-radius: 5px 0px 0px 5px;
+    min-width: 400px;
+    position: relative;
+    height: 500px;
+}
+
+.text{
+    text-align: center;
+    padding-top: 2em;
+    line-height: 35px;
+}
+
+.text h1{
+    color: var(--color01);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.text p{
+    color: var(--color04);
+    font-weight: 500;
+}
+
+.image{
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-login{
+    background-color: var(--color01);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid var(--color02);
+    min-width: 400px;
+    height: 100%;
+    padding: 2em 3em 1em;
+}
+
+.section-login h1{
+    font-size: 32px;
+    color: var(--color06);
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.login label{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.senha input, .email input{
+    display: block;
+    width: 300px;
+    height: 45px;
+    margin-top: 0.5em;
+    border: 1px solid var(--color02);
+    border-radius: 3px;
+    outline: none;
+    padding-left: 20px;
+}
+
+::placeholder{
+    color: var(--color03);
+}
+
+.politicas {
+    width: 250px;
+    line-height: 1.5em;
+    padding-left: 0.25em;
+    margin-bottom: 40px;
+}
+
+.destaque{
+    font-weight: bold;
+    color:  var(--color05);
+    text-decoration: underline;
+}
+
+.botao{
+    padding: 0 0.25em;
+}
+
+button{
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: var(--color05);
+    color: var(--color01);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+@media (max-width:450px){
+
+    body{
+        background-image: none;
+    }
+    .wrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+       
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        min-height: 60em; 
+        align-items: center;  
+    }
+
+    .conteudo-image{
+        border-radius: 0px;
+        width: 430px;
+    }
+
+    .section-login{
+        width: 430px;
+        border: none;
+    }
+
+    @media (max-width:375px){
+        .section-login{
+            width: 375px;
+        }
+        .conteudo-image{
+            width: 375px;
+        }
+    }
+    @media (max-width:320px){
+        .section-login{
+            min-width: 300px;
+            
+        }
+        .conteudo-image{
+            width: 330px;
+        }
+    }
+}
+
+@media (max-width: 830px){
+
+    .wrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .container{
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 60em; 
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    .conteudo-image{
+        border-radius: 0px;
+    }
+    .section-login{
+        border: none;
+    }
+}
